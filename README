@@ -1,0 +1,28 @@
+Little example how to import and access HIDAPI from Swift 3 in conjunction with the Griffin Power Mate controller.
+
+This is a Swift 3 port of https://github.com/kybernetyk/pm8/
+
+
+Dependencies:
+    - Xcode 8, Swift 3.1
+	- hidapi ( https://github.com/signal11/hidapi ) [brew install hidapi]
+
+
+Build:
+    Make sure hidapi/module.map points to the correct hidapi.h file on your system. It works for now (Nov 2016) with Homebrew hidapi. You might need to change it though.
+
+    Don't forget to update the 'Other Linker Flags' build settings in Xcode. Make sure the path points to the correct location of hidapi libs on your system.
+
+    If in doubt run:
+        pkg-config hidapi --cflags
+        pkg-config hidapi --libs
+
+
+Run:
+    You need to quit the Griffin Power Mate companion app first. Otherwise the device will be busy and not accessible to us!
+
+Copyright & License:
+	This code is licensed under the Affero GPL3 License!
+	(c) Jarosław Leon Szpilewski
+
+

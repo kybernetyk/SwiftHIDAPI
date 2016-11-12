@@ -25,6 +25,9 @@
 /* Begin PBXFileReference section */
 		0D9268DB1DD7512D0022835D /* SwiftHIDAPI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SwiftHIDAPI; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D9268DE1DD7512D0022835D /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		0DC3F2781DD75BCE00DECCE6 /* module.map */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.map; sourceTree = "<group>"; };
+		0DC3F2791DD7656700DECCE6 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		0DC3F27A1DD7656D00DECCE6 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +44,9 @@
 		0D9268D21DD7512D0022835D = {
 			isa = PBXGroup;
 			children = (
+				0DC3F27A1DD7656D00DECCE6 /* README */,
+				0DC3F2791DD7656700DECCE6 /* LICENSE */,
+				0DC3F2771DD75BCE00DECCE6 /* hidapi */,
 				0D9268DD1DD7512D0022835D /* SwiftHIDAPI */,
 				0D9268DC1DD7512D0022835D /* Products */,
 			);
@@ -60,6 +66,14 @@
 				0D9268DE1DD7512D0022835D /* main.swift */,
 			);
 			path = SwiftHIDAPI;
+			sourceTree = "<group>";
+		};
+		0DC3F2771DD75BCE00DECCE6 /* hidapi */ = {
+			isa = PBXGroup;
+			children = (
+				0DC3F2781DD75BCE00DECCE6 /* module.map */,
+			);
+			path = hidapi;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,7 +185,12 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-L/usr/local/Cellar/hidapi/0.8.0-rc1/lib",
+					"-lhidapi",
+				);
 				SDKROOT = macosx;
+				SWIFT_INCLUDE_PATHS = "${SRCROOT}/hidapi";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -212,7 +231,12 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = (
+					"-L/usr/local/Cellar/hidapi/0.8.0-rc1/lib",
+					"-lhidapi",
+				);
 				SDKROOT = macosx;
+				SWIFT_INCLUDE_PATHS = "${SRCROOT}/hidapi";
 			};
 			name = Release;
 		};
@@ -253,6 +277,7 @@
 				0D9268E41DD7512D0022835D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
