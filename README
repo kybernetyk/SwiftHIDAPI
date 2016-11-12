@@ -5,7 +5,7 @@ This is a Swift 3 port of https://github.com/kybernetyk/pm8
 
 Dependencies:
     - Xcode 8, Swift 3.1
-	- hidapi ( https://github.com/signal11/hidapi ) [brew install hidapi]
+    - hidapi ( https://github.com/signal11/hidapi ) [brew install hidapi]
 
 
 Build:
@@ -22,7 +22,7 @@ Run:
     You need to quit the Griffin Power Mate companion app first. Otherwise the device will be busy and not accessible to us!
 
 Copyright & License:
-	This code is licensed under the Affero GPL3 License!
+    This code is licensed under the Affero GPL3 License!
 	(c) Jarosław Leon Szpilewski
 
 
