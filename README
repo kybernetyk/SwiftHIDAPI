@@ -1,6 +1,6 @@
 Little example how to import and access HIDAPI from Swift 3 in conjunction with the Griffin Power Mate controller.
 
-This is a Swift 3 port of https://github.com/kybernetyk/pm8/
+This is a Swift 3 port of https://github.com/kybernetyk/pm8
 
 
 Dependencies:
